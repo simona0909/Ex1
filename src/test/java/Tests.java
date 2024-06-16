@@ -62,7 +62,7 @@ public class Tests {
     @DisplayName("Проверка на сохранение истории")
     public void addSaveHistoryChanges () {
         Account acc = new Account("Irina Ivanova");
-        acc.savepointAccount.add(()-> acc.save());
+        acc.savepointAccount.add(acc.save());
 
         boolean b = acc.savepointAccount.isEmpty();
         Assertions.assertNotEquals(b, true, "Ошибка. Пустой список сохранений");
